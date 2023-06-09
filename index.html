@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SAMCHI K-MART</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    </head>
+
+    <body> 
+        <header>
+            <a href="#" class="logo">SAMCHI K-MART</a>
+            <nav>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </nav>
+        </header>
+        <script type="text/javascript">
+          window.addEventListener("scroll", function(){
+              var header = document.querySelector("header");
+              header.classList.toggle("sticky", window.scrollY > 0);
+          })
+
+        </script>
+
+        <section id="home" class="home">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+    
+                    <div class="first slide">
+                        <img src="img/1.JPG" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="img/2.JPG" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="img/3.JPG" alt="">
+                    </div>
+    
+                    <div class="slide">
+                        <img src="img/4.JPG" alt="">
+                    </div>
+    
+    
+                    <div class="nav-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+    
+                    <div class="nav-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+    
+    
+                    </div>
+    
+                    <script type="text/javascript">
+                    var counter = 2;
+                    setInterval(function(){
+                        document.getElementById('radio' + counter).checked = true;
+                        counter++;
+                        if (counter > 4){
+                            counter=1;
+                        }
+                    }, 5000);
+                    </script>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="about" class="about reveal">
+          <div class="abt">
+            <img src="img/ramen.png" class="ramen">
+          <h2>About Us</h2>
+          <p>
+            Welcome to SAMCHI Korean Mart, your one-stop destination for all things Korean! We are a premier grocery store dedicated to bringing you the authentic flavors and delights of Korea. At SAMCHI Korean Mart, we take pride in offering an extensive range of high-quality Korean products, carefully curated to cater to your every need. From the iconic kimchi to the mouthwatering instant ramen, from crispy chips to delightful candies, and even indulgent ice cream, we have it all. Our shelves are filled with a wide variety of Korean food and snacks that will transport you to the vibrant streets of Seoul.
+          </p>
+          </div>
+          <div class="hstry">
+            <img src="img/scroll.png" class="scroll">
+            <h2>History</h2>
+            <p>
+              Established by the visionary Miram Family in April 2021, SAMCHI Korean Mart was born out of a passion to share the rich culture and exquisite taste of Korea with our valued customers. What started as a small venture in Sta. Inez, Bacolor has now blossomed into a thriving business that caters to the growing demand for Korean products in the local community.
+            </p>
+          </div>
+        </section>
+
+        <script type="text/javascript">
+          window.addEventListener('scroll', reveal);
+      
+          function reveal(){
+            var reveals = document.querySelectorAll('.reveal');
+      
+            for(var i = 0; i < reveals.length; i++){
+      
+              var windowheight = window.innerHeight;
+              var revealtop = reveals[i].getBoundingClientRect().top;
+              var revealpoint = 150;
+      
+              if(revealtop < windowheight - revealpoint){
+                reveals[i].classList.add('active');
+              }
+              else{
+                reveals[i].classList.remove('active');
+              }
+            }
+          }
+          </script>
+ 
+        
+        
+            
+            
+        
+        
+        <section id="products" class="products">
+            <h1>BRANDS OFFERED</h1>
+            <div class="product-list reveal">
+              <div class="product-item1">
+                <img src="img/img1.png" alt="Product 1">
+              </div>
+            
+              <div class="product-item2">
+                <img src="img/img2.png" alt="Product 2">
+              </div>
+
+              
+              <div class="product-item3">
+                <img src="img/img3.png" alt="Product 3">
+              </div>
+            
+
+            </div>
+        </section>
+
+        <div class="map" id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d863.1284065080079!2d120.65101979919737!3d14.994442700000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f62650463933%3A0xc66870cbf24982ed!2sXMV2%2BQVJ%2C%20MacArthur%20Highway%2C%20Bacolor%2C%20Pampanga!5e1!3m2!1sen!2sph!4v1686153351288!5m2!1sen!2sph" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-
+            referrer-when-downgrade"></iframe>
+        </div>
+        
+        <div class="container" id="contact">
+            <div class="content">
+              <div class="left-side">
+                <div class="address details">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="topic">Address</div>
+                  <div class="text-one">Zone 1 Highway</div>
+                  <div class="text-two">Sta Inez Bacolor Pampanga</div>
+                </div>
+                <div class="phone details">
+                  <i class="fas fa-phone-alt"></i>
+                  <div class="topic">Phone</div>
+                  <div class="text-one">+639 15 0411035</div>
+                  <div class="text-two">+639 36 6045562</div>
+                </div>
+                <div class="email details">
+                  <i class="fas fa-envelope"></i>
+                  <div class="topic">Email</div>
+                  <div class="text-one">samchikmart@gmail.com</div>
+                  <div class="text-two">miramfrancine1@gmail.com</div>
+                </div>
+              </div>
+              <div class="right-side">
+                <div class="topic-text">Send us a message</div>
+                <p>We're happy to help!</p>
+              
+                <form onsubmit="sendEmail(); reset(); return false;">
+                  <div class="input-box">
+                    <input type="text" placeholder="Enter your name" id="name" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="email" placeholder="Enter your email" id="email" required>
+                  </div>
+                  <div class="input-box message-box">
+                      <textarea placeholder="Enter your message" id="message"></textarea>
+                    
+                  </div>
+                  <div class="button">
+                    <input type="submit" value="Send Now" >
+                  </div>
+                </form>
+            </div>
+            </div>
+          </div>
+       
+        <footer class="footer">
+            <p>&copy; 2023 SAMCHI Korean Mart. All rights reserved.</p>
+        </footer>
+
+        
+        <script src="script.js"></script>   
+        
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+          function sendEmail(){
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            let body = "Name: " + name + "<br/> Email: " + email + "<br/> Message: " + message;
+        
+            Email.send({
+              Host : "smtp.elasticemail.com",
+              Username : "danieltiglao1@gmail.com",
+              Password : "532F16EED9C211960AB910646BAC54136BD1",
+              To : 'danieltiglao1@gmail.com',
+              From : 'danieltiglao1@gmail.com',
+              Subject : "Customer's Query",
+              Body : body
+            }).then(
+              message => alert('Message Sent!')
+            );
+          }
+        </script>
+      </body>
+
+
+
+</html>
